@@ -1,0 +1,21 @@
+import random
+while True:
+    choice = input("Would you like to roll the dice(yes/no): ").lower()
+    if choice== 'yes':
+        rolls = int(input("How many dice would you like to roll: "))
+        i =0
+        for roll in range(rolls):
+            if rolls>0:
+                die1 = random.randint(1, 6)
+                die2 = random.randint(1, 6)
+                print(f"roll {roll +1}: {die1},{die2}")
+            elif rolls<0:
+                print("Invalid input. Please enter a number greater than 0.")
+            else:
+                print("Invalid Input. Please enter a valid number.")
+    elif choice=='no':
+        print("Thank you for playing. Goodbye.")
+        break
+
+    else:
+        print("Invalid Input. Please enter yes or no.")
